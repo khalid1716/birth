@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>С Днём Рождения!</h1>
+        <p>Помоги собрать торт! Кликай на ингредиенты в правильном порядке.</p>
+        <div id="game">
+            <div id="ingredients">
+                <div class="ingredient" data-ingredient="biscuit">Бисквит</div>
+                <div class="ingredient" data-ingredient="cream">Крем</div>
+                <div class="ingredient" data-ingredient="berries">Ягоды</div>
+                <div class="ingredient" data-ingredient="candles">Свечи</div>
+            </div>
+            <div id="cake"></div>
+        </div>
+        <p id="message"></p>
+        <!-- Контейнер для итогового торта -->
+        <div id="final-cake-container">
+            <img id="final-cake" src="" alt="Готовый торт">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
