@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    animation: rainbowBackground 10s infinite;
+}
+
+@keyframes rainbowBackground {
+    0% { background-color: #ff9a9e; }
+    25% { background-color: #fad0c4; }
+    50% { background-color: #a1c4fd; }
+    75% { background-color: #c2e9fb; }
+    100% { background-color: #ff9a9e; }
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+#game {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ingredient {
+    padding: 10px;
+    background-color: #ffcc80;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ingredient:hover {
+    background-color: #ffb74d;
+}
+
+#cake {
+    width: 200px;
+    height: 300px; /* Увеличили высоту */
+    background-color: #fff3e0;
+    border: 2px dashed #ffb74d;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.layer {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e91e63;
+}
+
+/* Контейнер для итогового торта */
+#final-cake-container {
+    display: none; /* Скрываем до завершения */
+    margin-top: 20px;
+}
+
+#final-cake {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Адаптация для телефонов */
+@media (max-width: 600px) {
+    #game {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cake {
+        width: 150px;
+        height: 250px;
+    }
+
+    #ingredients {
+        margin-bottom: 20px;
+    }
+
+    .ingredient {
+        width: 100%;
+        text-align: center;
+    }
+
+    #final-cake {
+        width: 100%;
+        max-width: 300px;
+    }
+}
